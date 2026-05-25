@@ -1,12 +1,12 @@
-![Apps rePhorged](Apps_rePhorged.png)
+![Apps-reForged](Apps-reForged.png)
 
-# regexPhorge
+# regexForged
 
 A high-performance command-line utility designed for fast, in-place batch regular expression replacements across thousands of localized text and Markdown files.
 
 ## Overview
 
-When migrating massive datasets or archival documents (such as legacy HTML and game rulesets) into modern structured formats, standard IDE tools often struggle with the memory and user interface overhead required to track tens of thousands of simultaneous line modifications. `regexPhorge` solves this bottleneck by providing a headless, ultra-lean execution layer that cuts through thousands of nested sub-folders and files in mere seconds. Operating entirely in place, it precompiles search patterns, minimizes unnecessary disk writes, and implements resilient encoding fallbacks to seamlessly upgrade legacy character structures into clean, standardized document files.
+When migrating massive datasets or archival documents (such as legacy HTML and game rulesets) into modern structured formats, standard IDE tools often struggle with the memory and user interface overhead required to track tens of thousands of simultaneous line modifications. `regexForged` solves this bottleneck by providing a headless, ultra-lean execution layer that cuts through thousands of nested sub-folders and files in mere seconds. Operating entirely in place, it precompiles search patterns, minimizes unnecessary disk writes, and implements resilient encoding fallbacks to seamlessly upgrade legacy character structures into clean, standardized document files.
 
 ## Features
 
@@ -26,12 +26,12 @@ When migrating massive datasets or archival documents (such as legacy HTML and g
 **Download** the script to your local machine. You can clone the repository or download the latest release:
 
 ```
-git clone https://github.com/oldmanumby/regexPhorge.git cd regexPhorge
+git clone https://github.com/oldmanumby/regexForged.git cd regexForged
 ```
 
 ## Configuration
 
-When running `regexPhorge`, parameters are passed explicitly as command-line arguments. The utility processes inputs based on three primary components:
+When running `regexForged`, parameters are passed explicitly as command-line arguments. The utility processes inputs based on three primary components:
 
 1. **pattern:** The specific regular expression sequence to find within the localized documents.
 2. **replacement:** The clean string or layout syntax to substitute in place of the detected target pattern.
@@ -48,13 +48,13 @@ Ensure you wrap your arguments cleanly in single quotes when executing commands 
 You can execute the script from your terminal or command prompt:
 
 ```
-python3 regexPhorge.py 'pattern' 'replacement' [--ext .ext]
+python3 regexForged.py 'pattern' 'replacement' [--ext .ext]
 ```
 
 Or using your explicit environment path:
 
 ```
-/opt/homebrew/bin/python3 regexPhorge.py 'pattern' 'replacement' [--ext .ext]
+/opt/homebrew/bin/python3 regexForged.py 'pattern' 'replacement' [--ext .ext]
 ```
 
 ### Example Workflows
@@ -62,26 +62,26 @@ Or using your explicit environment path:
 1. **Stripping Out Explicit HTML Tags:** Wipe out unneeded paragraph markup elements globally across your Markdown workspace files:
 
 ```
-python3 regexPhorge.py '<p>' ''
+python3 regexForged.py '<p>' ''
 ```
 
 2. **Formatting Header Structures with Embedded Content:** Convert old-school font style parameters safely into clean Markdown headings while insulating double quotes from terminal shell fragmentation:
 
 ```
-python3 regexPhorge.py '<FONT SIZE="6">' '## '
+python3 regexForged.py '<FONT SIZE="6">' '## '
 ```
 
 3. **Collapsing Fragmented Multi-Line Newlines:** Scan across multi-line blocks to safely transform duplicate empty vertical margins into a single-blank layout line break:
 
 ```
-python3 regexPhorge.py '\n{3,}' '\n\n'
+python3 regexForged.py '\n{3,}' '\n\n'
 ```
 
 4. **Stitching Broken Sentence Wrap Segments:** Mend premature line-wrap sentence separations while fully insulating your actual double-newline paragraph layouts:
 
 
 ```
-python3 regexPhorge.py '(?<=[^\n])\n(?=[^\n])' ' '
+python3 regexForged.py '(?<=[^\n])\n(?=[^\n])' ' '
 ```
 
 ## Advanced Features
