@@ -6,7 +6,7 @@ A high-performance command-line utility designed for fast, in-place batch regula
 
 ## Overview
 
-When migrating massive datasets or archival documents (such as legacy HTML and game rulesets) into modern structured formatting, standard IDE tools often struggle under the memory and user interface overhead of tracking tens of thousands of simultaneous line modifications. `regexPhorge` solves this bottleneck by providing a headless, ultra-lean execution layer that cuts through thousands of nested sub-folders and files in mere seconds. Operating completely in-place, it pre-compiles search patterns, minimizes unnecessary disk-write actions, and implements resilient encoding fallback mechanisms to seamlessly upgrade legacy character structures into clean, standardized document files.
+When migrating massive datasets or archival documents (such as legacy HTML and game rulesets) into modern structured formats, standard IDE tools often struggle with the memory and user interface overhead required to track tens of thousands of simultaneous line modifications. `regexPhorge` solves this bottleneck by providing a headless, ultra-lean execution layer that cuts through thousands of nested sub-folders and files in mere seconds. Operating entirely in place, it precompiles search patterns, minimizes unnecessary disk writes, and implements resilient encoding fallbacks to seamlessly upgrade legacy character structures into clean, standardized document files.
 
 ## Features
 
@@ -14,7 +14,7 @@ When migrating massive datasets or archival documents (such as legacy HTML and g
 - **Smart Disk-Write Management:** Pre-checks matches using pre-compiled byte regex patterns and completely skips the file system write process if zero replacements are identified.
 - **Automated Encoding Resilience:** Attempts primary reading in standard UTF-8 and gracefully falls back to Windows-1252 (CP1252) for legacy formats, ultimately saving files out as clean UTF-8 to resolve encoding mismatches.
 - **Dynamic File Targeting:** Built-in deep directory scanning targets custom extensions (such as `.md` or `.htm`) down through infinitely nested folder layouts.
-- **Live Output Reporting:** Displays real-time operational feedback, featuring accurate summaries tracking total files successfully modified and total structural replacements completed.
+- **Live Output Reporting:** Displays real-time operational feedback, featuring accurate summaries that track the total files successfully modified and the total structural replacements completed.
 
 ## Requirements
 
@@ -64,19 +64,19 @@ Or using your explicit environment path:
 ```
 python3 regexPhorge.py '<p>' ''
 ```
-   
+
 2. **Formatting Header Structures with Embedded Content:** Convert old-school font style parameters safely into clean Markdown headings while insulating double quotes from terminal shell fragmentation:
 
 ```
 python3 regexPhorge.py '<FONT SIZE="6">' '## '
 ```
-   
+
 3. **Collapsing Fragmented Multi-Line Newlines:** Scan across multi-line blocks to safely transform duplicate empty vertical margins into a single-blank layout line break:
 
 ```
 python3 regexPhorge.py '\n{3,}' '\n\n'
 ```
-   
+
 4. **Stitching Broken Sentence Wrap Segments:** Mend premature line-wrap sentence separations while fully insulating your actual double-newline paragraph layouts:
 
 
